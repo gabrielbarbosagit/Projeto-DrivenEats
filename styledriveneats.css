@@ -104,7 +104,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
     
   }
   
@@ -114,7 +114,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .prato3 {
@@ -123,7 +123,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .prato4 {
@@ -132,14 +132,14 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .pratos p {
     margin-top: 10px;
     margin-left: 10px;
-    max-height: 70px; /* add this */
-    overflow: hidden; /* add this */
+    max-height: 70px; 
+    overflow: hidden; 
     padding-bottom: 2px;
   }
   
@@ -185,7 +185,7 @@
     width: 172px;
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   }
   
@@ -195,7 +195,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .bebida3 {
@@ -204,7 +204,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .bebida4 {
@@ -212,14 +212,14 @@
     width: 172px;
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .bebidas p {
     margin-top: 10px;
     margin-left: 10px;
-    max-height: 70px; /* add this */
-    overflow: hidden; /* add this */
+    max-height: 70px; 
+    overflow: hidden; 
     padding-bottom: 2px;
   }
   
@@ -266,7 +266,7 @@
     width: 172px;
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .sobremesa2 {
@@ -275,7 +275,7 @@
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .sobremesa3 {
@@ -283,7 +283,7 @@
     width: 172px;
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .sobremesa4 {
@@ -291,14 +291,14 @@
     width: 172px;
     box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
-    height: auto; /* adjust height to fit content */
+    height: auto; 
   }
   
   .sobremesas p {
     margin-top: 10px;
     margin-left: 10px;
-    max-height: 70px; /* add this */
-    overflow: hidden; /* add this */
+    max-height: 70px; 
+    overflow: hidden; 
     padding-bottom: 2px;
   }
   
@@ -362,3 +362,4 @@
     overflow: hidden;
   }
   
+/* LAYOUT E BOX SHADOW FINALIZADO */
