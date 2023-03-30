@@ -34,6 +34,7 @@
     width: 248px;
     height: 44px;
     font-size: 44px;
+    margin-left: 10px;
   }
   
   h2 {
@@ -41,10 +42,11 @@
     width: 226px;
     height: 17px;
     font-size: 18px;
+    margin-left: 10px;
   }
   
   h3 {
-    margin-top: -10px;
+   
     height: 15px;
     width: 250px;
     padding: 10px;
@@ -83,6 +85,7 @@
     width: 100%;
     gap: 10px;
     overflow: auto;
+    overflow-x: scroll;
   }
   
   .pratos img {
@@ -98,15 +101,18 @@
   .prato1 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
+    
   }
   
   .prato2 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -114,7 +120,17 @@
   .prato3 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
+    border-radius: 9px;
+    height: auto; /* adjust height to fit content */
+  }
+  
+  .prato4 {
+    background-color: white;
+    width: 172px;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -124,6 +140,7 @@
     margin-left: 10px;
     max-height: 70px; /* add this */
     overflow: hidden; /* add this */
+    padding-bottom: 2px;
   }
   
   .pratos #titulos {
@@ -166,15 +183,17 @@
   .bebida1 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   }
   
   .bebida2 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -182,7 +201,16 @@
   .bebida3 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
+    border-radius: 9px;
+    height: auto; /* adjust height to fit content */
+  }
+  
+  .bebida4 {
+    background-color: white;
+    width: 172px;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -192,6 +220,7 @@
     margin-left: 10px;
     max-height: 70px; /* add this */
     overflow: hidden; /* add this */
+    padding-bottom: 2px;
   }
   
   .bebidas #titulos {
@@ -235,7 +264,7 @@
   .sobremesa1 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -243,7 +272,8 @@
   .sobremesa2 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -251,7 +281,15 @@
   .sobremesa3 {
     background-color: white;
     width: 172px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+    border-radius: 9px;
+    height: auto; /* adjust height to fit content */
+  }
+  
+  .sobremesa4 {
+    background-color: white;
+    width: 172px;
+    box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
     border-radius: 9px;
     height: auto; /* adjust height to fit content */
   }
@@ -261,6 +299,7 @@
     margin-left: 10px;
     max-height: 70px; /* add this */
     overflow: hidden; /* add this */
+    padding-bottom: 2px;
   }
   
   .sobremesas #titulos {
