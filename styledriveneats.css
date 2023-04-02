@@ -1,3 +1,450 @@
+<<<<<<< HEAD
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 80px;
+    background-color: lightgray;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 80px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: red;
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  .footer-caixa {
+    height: 60px;
+  }
+
+  .footer-botao {
+    width: 60%;
+    height: 40%;
+    margin-top: 5px;
+  }
+
+  .footer-botao.green{
+    background-color: green;
+  
+    
+  }
+}
+
+
+h1 {
+  margin: 0;
+  width: 248px;
+  height: 44px;
+  font-size: 44px;
+  
+}
+
+h2 {
+  margin: 0;
+  width: 226px;
+  height: 17px;
+  font-size: 18px;
+}
+
+h3 {
+  margin-top: -10px;
+  height: 15px;
+  width: 250px;
+  padding: 10px;
+  font-size: 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: righteous;
+}
+
+p {
+  font-family: roboto;
+}
+
+.titulos {
+  font-weight: bold;
+}
+
+#preços {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 2px;
+}
+
+.container {
+  overflow: auto;
+}
+.pratos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
+  overflow: auto;
+  overflow-x: scroll;
+}
+
+
+.pratos img {
+  width: 144px;
+  height: 87px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.prato1 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  padding-bottom: 2px;
+  cursor: pointer;
+  outline: none;
+  cursor: pointer;
+}
+
+.prato1.green {
+  border: 3px solid green;
+}
+
+.prato2 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.prato2.green{
+  border: 3px solid green;
+}
+
+.prato3 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.prato3.green{
+  border: 3px solid green;
+}
+.prato4 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.prato4.green{
+  border: 3px solid green;}
+.pratos p {
+  margin-top: 10px;
+  margin-left: 10px;
+  max-height: 70px; /* add this */
+  overflow: hidden; /* add this */
+}
+
+
+
+
+
+h4 {
+  margin: 0;
+  height: 25px;
+  width: 250px;
+  padding: 10px;
+  font-size: 26px;
+}
+
+.bebidas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
+  overflow: auto;
+}
+
+.bebidas img {
+  width: 144px;
+  height: 87px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.bebida1 {
+  background-color: white;
+  width: 172px;
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  cursor: pointer;
+}
+.bebida1.green{
+  border: 3px solid green;
+}
+.bebida2 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+.bebida2.green{
+  border: 3px solid green;}
+
+
+.bebida3 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+.bebida3.green{
+  border: 3px solid green;}
+.bebida4 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.bebida4.green{
+  border: 3px solid green;}
+
+.bebidas p {
+  margin-top: 10px;
+  margin-left: 10px;
+  max-height: 70px; /* add this */
+  overflow: hidden; /* add this */
+}
+
+
+
+
+h5 {
+  margin: 0;
+  height: 25px;
+  width: 250px;
+  padding: 10px;
+  font-size: 26px;
+  white-space: nowrap;
+}
+
+.sobremesas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
+  overflow: auto;
+}
+
+.sobremesas img {
+  width: 144px;
+  height: 87px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.sobremesa1 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.sobremesa1.green{
+  border: 3px solid green;
+}
+
+.sobremesa2 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.sobremesa2.green{
+  border: 3px solid green;
+}
+
+.sobremesa3 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.sobremesa3.green{
+  border: 3px solid green;
+}
+.sobremesa4 {
+  background-color: white;
+  width: 172px;
+  box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
+  border-radius: 9px;
+  height: auto; /* adjust height to fit content */
+  cursor: pointer;
+}
+
+.sobremesa4.green{
+  border: 3px solid green;
+}
+
+.sobremesas p {
+  margin-top: 10px;
+  margin-left: 10px;
+  max-height: 70px; /* add this */
+  overflow: hidden; /* add this */
+}
+
+
+
+
+.footer-caixa {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-botao {
+  background-color: #cbcbcb;
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
+}
+.footer-botao.green{
+  background-color: green !important;}
+  
+
+
+  .hidden {
+    display: none;
+  }
+
+
+  
+  .overlay {
+    
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Opacidade de 50% */
+      z-index: 9999;
+    }
+    
+  
+
+  
+  
+  .mostrar {
+    
+    background-color: #50d074;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    padding: 20px;
+    z-index: 2000000000;
+  
+    
+    border-radius: 9px;
+    margin-bottom: 70px;
+    
+  }
+
+    
+  
+  
+  
+img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+
+=======
 @media screen and (max-width: 600px) {
   body {
     padding-top: 80px;
@@ -394,3 +841,4 @@ img {
   margin: 0 auto;
   overflow: hidden;
 }
+>>>>>>> 93aa1ffee4765f26ccbca84a8dcaa978054b2814

@@ -1,286 +1,129 @@
-<<<<<<< HEAD
-function escolherproduto(elemento) {
+
   
+  
+  
+  // select the elements and store them in variables
   const pratos = document.querySelectorAll(".pratos > div");
-  pratos.forEach((prato) => {
-    prato.classList.remove("green");
-  });
-  
- 
-  elemento.classList.add("green");
-  updateBotaoPedido();
-}
+  const bebidas = document.querySelectorAll(".bebidas > div");
+  const sobremesas = document.querySelectorAll(".sobremesas > div");
+  const BotaoGreen = document.querySelector(".footer-botao");
 
-
-function escolherbebida(elemento) {
-    
-    const bebidas = document.querySelectorAll(".bebidas > div");
-    bebidas.forEach((bebida) => {
-      bebida.classList.remove("green");
-    });
-    
-    
-    elemento.classList.add("green");
-    updateBotaoPedido();
-  }
-  
-
-  function escolhersobremesa(elemento) {
-    
-    const sobremesas = document.querySelectorAll(".sobremesas > div");
-    sobremesas.forEach((sobremesa) => {
-      sobremesa.classList.remove("green");
-    });
-    
-    
-    elemento.classList.add("green");
-    updateBotaoPedido();
-  }
-  
-function updateBotaoPedido() {
+  // define the function to update the button state
+  function updateBotaoGreen() {
+  // check if all three items are selected
   const pratoSelecionado = document.querySelector(".pratos > .green");
   const bebidaSelecionada = document.querySelector(".bebidas > .green");
   const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
-
-  const botaoPedido = document.querySelector(".footer-botao");
 
   if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
-    botaoPedido.style.backgroundColor = "green";
-    botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
+    BotaoGreen.style.backgroundColor = "green";
+    BotaoGreen.textContent = "Finalizar Pedido - Total: R$ " + parseFloat(getPrecoTotal()).toFixed(2);
+
+   
   } else {
-    botaoPedido.style.backgroundColor = "#A1A1A1";
-    botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
+    BotaoGreen.style.backgroundColor = "#A1A1A1";
+    BotaoGreen.textContent = "Selecione os 3 itens para fechar o pedido";
+  }
   }
 
+  // define the function to get the total price
+  function getPrecoTotal() {
+  // get the prices of the selected items
   
-}
-  
-  
-  function verificarpedido() {
   const pratoSelecionado = document.querySelector(".pratos > .green");
   const bebidaSelecionada = document.querySelector(".bebidas > .green");
   const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
+  let pratoPreco = 0;
+  let bebidaPreco = 0;
+  let sobremesaPreco = 0;
 
-  const botaoPedido = document.querySelector(".footer-botao");
-
+  if (pratoSelecionado) {
+  pratoPreco = parseFloat(pratoSelecionado.querySelector(".preços").textContent.replace("R$ ", "").replace(",", "."));
+  }
+  if (bebidaSelecionada) {
+  bebidaPreco = parseFloat(bebidaSelecionada.querySelector(".preços").textContent.replace("R$ ", "").replace(",", "."));
+  }
+  if (sobremesaSelecionada) {
+  sobremesaPreco = parseFloat(sobremesaSelecionada.querySelector(".preços").textContent.replace("R$ ", "").replace(",", "."));
   
-    function updateBotaoPedido() {
-      if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
-        botaoPedido.style.backgroundColor = "green";
-        botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-      } else {
-        botaoPedido.style.backgroundColor = "#A1A1A1";
-        botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
-        if (!pratoSelecionado || !bebidaSelecionada || !sobremesaSelecionada) {
-          botaoPedido.style.backgroundColor = "#A1A1A1";
-          botaoPedido.textContent = "Selecionar Pedido";
-        }
-      }
-    }
-    
-  
-
-  function getPrecoTotal() {
-    const pratoPreco = parseFloat(pratoSelecionado.querySelector("#preços").textContent.replace("R$ ", ""));
-    const bebidaPreco = parseFloat(bebidaSelecionada.querySelector("#preços").textContent.replace("R$ ", ""));
-    const sobremesaPreco = parseFloat(sobremesaSelecionada.querySelector("#preços").textContent.replace("R$ ", ""));
-    return pratoPreco + bebidaPreco + sobremesaPreco;
   }
 
-  function toggleSelection(element) {
-    if (element.classList.contains("green")) {
-      element.classList.remove("green");
-    } else {
-      element.classList.add("green");
-    }
-    updateBotaoPedido();
+  return pratoPreco + bebidaPreco + sobremesaPreco;
   }
-  
-  pratoSelecionado.onclick = function() {
-    toggleSelection(pratoSelecionado);
+
+  // define the function to toggle the selection of an item
+  function toggleSelection(element, elements) {
+  elements.forEach((item) => {
+  if (item !== element && item.classList.contains("green")) {
+  item.classList.remove("green");
   }
-  
-  bebidaSelecionada.onclick = function() {
-    toggleSelection(bebidaSelecionada);
+  });
+  if (element.classList.contains("green")) {
+  element.classList.remove("green");
+  } else {
+  element.classList.add("green");
   }
-  
-  sobremesaSelecionada.onclick = function() {
-    toggleSelection(sobremesaSelecionada);
+  updateBotaoGreen();
   }
-  
-  function updateBotaoPedido() {
-    
-      if (pratoSelecionado.classList.contains("green") &&
-          bebidaSelecionada.classList.contains("green") &&
-          sobremesaSelecionada.classList.contains("green")) {
-        botaoPedido.style.backgroundColor = "green";
-        botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-      } else {
-        botaoPedido.style.backgroundColor = "#A1A1A1";
-        botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
-      }
-    }
-    
+
+  // add event listeners to the items to toggle the selection
+  pratos.forEach((prato) => {
+  prato.addEventListener("click", () => {
+  toggleSelection(prato, pratos);
+  });
+  });
+
+  bebidas.forEach((bebida) => {
+  bebida.addEventListener("click", () => {
+  toggleSelection(bebida, bebidas);
+  });
+  });
+
+  sobremesas.forEach((sobremesa) => {
+  sobremesa.addEventListener("click", () => {
+  toggleSelection(sobremesa, sobremesas);
+  });
+  });
+
+  BotaoGreen.addEventListener("click", () => {
+    const pratoSelecionado = document.querySelector(".pratos > .green");
+    const bebidaSelecionada = document.querySelector(".bebidas > .green");
+    const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
+    const total = getPrecoTotal();
   
     if (!pratoSelecionado || !bebidaSelecionada || !sobremesaSelecionada) {
-      botaoPedido.style.backgroundColor = "green";
-      botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
+      alert("Por favor, selecione um item de cada categoria para finalizar o pedido.");
+      return;
     }
-  }
   
-  
-  
-
-  if (pratoSelecionado.classList.contains("green") &&
-  bebidaSelecionada.classList.contains("green") &&
-  sobremesaSelecionada.classList.contains("green")) {
-const pratoTitulo = pratoSelecionado.querySelector("#titulos").textContent;
-const bebidaTitulo = bebidaSelecionada.querySelector("#titulos").textContent;
-const sobremesaTitulo = sobremesaSelecionada.querySelector("#titulos").textContent;
-const precoTotal = getPrecoTotal();
-
-const mensagemPedido = `Gostaria de fazer o pedido:\n- Prato: ${pratoTitulo}\n- Bebida: ${bebidaTitulo}\n- Sobremesa: ${sobremesaTitulo}\nTotal: R$ ${precoTotal.toFixed(2)}`;
-=======
-function escolherproduto(elemento) {
-  
-  const pratos = document.querySelectorAll(".pratos > div");
-  pratos.forEach((prato) => {
-    prato.classList.remove("green");
+    finalizarpedido(pratoSelecionado, bebidaSelecionada, sobremesaSelecionada, total);
   });
   
- 
-  elemento.classList.add("green");
-  updateBotaoPedido();
-}
+  function finalizarpedido(pratoSelecionado, bebidaSelecionada, sobremesaSelecionada, total) {
 
-
-function escolherbebida(elemento) {
-    
-    const bebidas = document.querySelectorAll(".bebidas > div");
-    bebidas.forEach((bebida) => {
-      bebida.classList.remove("green");
-    });
-    
-    
-    elemento.classList.add("green");
-    updateBotaoPedido();
-  }
+    let pratoNome = "";
+    let bebidaNome = "";
+    let sobremesaNome = "";
+    let pratoPreco = "";
+    let bebidaPreco = "";
+    let sobremesaPreco = "";
   
-
-  function escolhersobremesa(elemento) {
-    
-    const sobremesas = document.querySelectorAll(".sobremesas > div");
-    sobremesas.forEach((sobremesa) => {
-      sobremesa.classList.remove("green");
-    });
-    
-    
-    elemento.classList.add("green");
-    updateBotaoPedido();
-  }
-  
-function updateBotaoPedido() {
-  const pratoSelecionado = document.querySelector(".pratos > .green");
-  const bebidaSelecionada = document.querySelector(".bebidas > .green");
-  const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
-
-  const botaoPedido = document.querySelector(".footer-botao");
-
-  if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
-    botaoPedido.style.backgroundColor = "green";
-    botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-  } else {
-    botaoPedido.style.backgroundColor = "#A1A1A1";
-    botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
-  }
-
-  
-}
-  
-  
-  function verificarpedido() {
-  const pratoSelecionado = document.querySelector(".pratos > .green");
-  const bebidaSelecionada = document.querySelector(".bebidas > .green");
-  const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
-
-  const botaoPedido = document.querySelector(".footer-botao");
-
-  
-    function updateBotaoPedido() {
-      if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
-        botaoPedido.style.backgroundColor = "green";
-        botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-      } else {
-        botaoPedido.style.backgroundColor = "#A1A1A1";
-        botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
-        if (!pratoSelecionado || !bebidaSelecionada || !sobremesaSelecionada) {
-          botaoPedido.style.backgroundColor = "#A1A1A1";
-          botaoPedido.textContent = "Selecionar Pedido";
-        }
-      }
+    if (pratoSelecionado && pratoSelecionado.querySelector(".titulos") && pratoSelecionado.querySelector(".preços")) {
+      pratoNome = pratoSelecionado.querySelector(".titulos").textContent;
+      pratoPreco = pratoSelecionado.querySelector(".preços").textContent;
     }
-    
-  
-
-  function getPrecoTotal() {
-    const pratoPreco = parseFloat(pratoSelecionado.querySelector("#preços").textContent.replace("R$ ", ""));
-    const bebidaPreco = parseFloat(bebidaSelecionada.querySelector("#preços").textContent.replace("R$ ", ""));
-    const sobremesaPreco = parseFloat(sobremesaSelecionada.querySelector("#preços").textContent.replace("R$ ", ""));
-    return pratoPreco + bebidaPreco + sobremesaPreco;
-  }
-
-  function toggleSelection(element) {
-    if (element.classList.contains("green")) {
-      element.classList.remove("green");
-    } else {
-      element.classList.add("green");
+    if (bebidaSelecionada && bebidaSelecionada.querySelector(".titulos") && bebidaSelecionada.querySelector(".preços")) {
+      bebidaNome = bebidaSelecionada.querySelector(".titulos").textContent;
+      bebidaPreco = bebidaSelecionada.querySelector(".preços").textContent;
     }
-    updateBotaoPedido();
-  }
-  
-  pratoSelecionado.onclick = function() {
-    toggleSelection(pratoSelecionado);
-  }
-  
-  bebidaSelecionada.onclick = function() {
-    toggleSelection(bebidaSelecionada);
-  }
-  
-  sobremesaSelecionada.onclick = function() {
-    toggleSelection(sobremesaSelecionada);
-  }
-  
-  function updateBotaoPedido() {
-    
-      if (pratoSelecionado.classList.contains("green") &&
-          bebidaSelecionada.classList.contains("green") &&
-          sobremesaSelecionada.classList.contains("green")) {
-        botaoPedido.style.backgroundColor = "green";
-        botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-      } else {
-        botaoPedido.style.backgroundColor = "#A1A1A1";
-        botaoPedido.textContent = "Selecione os 3 itens para fechar o pedido";
-      }
+    if (sobremesaSelecionada && sobremesaSelecionada.querySelector(".titulos") && sobremesaSelecionada.querySelector(".preços")) {
+      sobremesaNome = sobremesaSelecionada.querySelector(".titulos").textContent;
+      sobremesaPreco = sobremesaSelecionada.querySelector(".preços").textContent;
     }
-    
   
-    if (!pratoSelecionado || !bebidaSelecionada || !sobremesaSelecionada) {
-      botaoPedido.style.backgroundColor = "green";
-      botaoPedido.textContent = "Finalizar Pedido - Total: R$ " + getPrecoTotal().toFixed(2);
-    }
+    const mensagem = `Olá, gostaria de fazer o pedido:\n- Prato: ${pratoNome} (${pratoPreco})\n- Bebida: ${bebidaNome} (${bebidaPreco})\n- Sobremesa: ${sobremesaNome} (${sobremesaPreco})\nTotal: R$ ${total.toFixed(2)}`;
+    const encoded_message = encodeURIComponent(mensagem);
+  
+    window.open(`https://wa.me/+5513996280808?text=${encoded_message}`);
   }
   
-  
-  
-
-  if (pratoSelecionado.classList.contains("green") &&
-  bebidaSelecionada.classList.contains("green") &&
-  sobremesaSelecionada.classList.contains("green")) {
-const pratoTitulo = pratoSelecionado.querySelector("#titulos").textContent;
-const bebidaTitulo = bebidaSelecionada.querySelector("#titulos").textContent;
-const sobremesaTitulo = sobremesaSelecionada.querySelector("#titulos").textContent;
-const precoTotal = getPrecoTotal();
-
-const mensagemPedido = `Gostaria de fazer o pedido:\n- Prato: ${pratoTitulo}\n- Bebida: ${bebidaTitulo}\n- Sobremesa: ${sobremesaTitulo}\nTotal: R$ ${precoTotal.toFixed(2)}`;
->>>>>>> c41cf3c6c14271069b56ada34029c921fb79da49
-}
