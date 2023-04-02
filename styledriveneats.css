@@ -42,6 +42,7 @@ h1 {
   width: 248px;
   height: 44px;
   font-size: 44px;
+  margin-left: 5px;
   
 }
 
@@ -50,6 +51,7 @@ h2 {
   width: 226px;
   height: 17px;
   font-size: 18px;
+  margin-left: 7px;
 }
 
 h3 {
@@ -76,7 +78,7 @@ p {
   font-weight: bold;
 }
 
-#preços {
+.preços {
   font-weight: bold;
   color: black;
   margin-bottom: 2px;
@@ -113,7 +115,7 @@ p {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   padding-bottom: 2px;
   cursor: pointer;
   outline: none;
@@ -130,7 +132,7 @@ p {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -144,7 +146,7 @@ p {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -157,7 +159,7 @@ p {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -166,8 +168,8 @@ p {
 .pratos p {
   margin-top: 10px;
   margin-left: 10px;
-  max-height: 70px; /* add this */
-  overflow: hidden; /* add this */
+  max-height: 70px; 
+  overflow: hidden; 
 }
 
 
@@ -207,7 +209,7 @@ h4 {
   width: 172px;
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   cursor: pointer;
 }
@@ -220,7 +222,7 @@ h4 {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 .bebida2.green{
@@ -233,7 +235,7 @@ h4 {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 .bebida3.green{
@@ -243,7 +245,7 @@ h4 {
   width: 172px;
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -253,8 +255,8 @@ h4 {
 .bebidas p {
   margin-top: 10px;
   margin-left: 10px;
-  max-height: 70px; /* add this */
-  overflow: hidden; /* add this */
+  max-height: 70px; 
+  overflow: hidden; 
 }
 
 
@@ -294,7 +296,7 @@ h5 {
   width: 172px;
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -308,7 +310,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
 
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -321,7 +323,7 @@ h5 {
   width: 172px;
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -333,7 +335,7 @@ h5 {
   width: 172px;
   box-shadow: 2px 2px 2px 2px rgba(2, 2, 5, 0.2);
   border-radius: 9px;
-  height: auto; /* adjust height to fit content */
+  height: auto; 
   cursor: pointer;
 }
 
@@ -344,8 +346,8 @@ h5 {
 .sobremesas p {
   margin-top: 10px;
   margin-left: 10px;
-  max-height: 70px; /* add this */
-  overflow: hidden; /* add this */
+  max-height: 70px; 
+  overflow: hidden; 
 }
 
 

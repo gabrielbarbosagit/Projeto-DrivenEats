@@ -2,22 +2,22 @@
   
   
   
-  // select the elements and store them in variables
+  // Seleciona e armazena em variaveis
   const pratos = document.querySelectorAll(".pratos > div");
   const bebidas = document.querySelectorAll(".bebidas > div");
   const sobremesas = document.querySelectorAll(".sobremesas > div");
   const BotaoGreen = document.querySelector(".footer-botao");
 
-  // define the function to update the button state
+  // Funcao para mudar o botao
   function updateBotaoGreen() {
-  // check if all three items are selected
+  // Verifica se os 3 itens estao selecionados
   const pratoSelecionado = document.querySelector(".pratos > .green");
   const bebidaSelecionada = document.querySelector(".bebidas > .green");
   const sobremesaSelecionada = document.querySelector(".sobremesas > .green");
 
   if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
     BotaoGreen.style.backgroundColor = "green";
-    BotaoGreen.textContent = "Finalizar Pedido - Total: R$ " + parseFloat(getPrecoTotal()).toFixed(2);
+    BotaoGreen.textContent = "Fechar Pedido";
 
    
   } else {
@@ -26,9 +26,9 @@
   }
   }
 
-  // define the function to get the total price
+  // Funcao do preco total
   function getPrecoTotal() {
-  // get the prices of the selected items
+  // Preco de cada item
   
   const pratoSelecionado = document.querySelector(".pratos > .green");
   const bebidaSelecionada = document.querySelector(".bebidas > .green");
@@ -51,7 +51,7 @@
   return pratoPreco + bebidaPreco + sobremesaPreco;
   }
 
-  // define the function to toggle the selection of an item
+  // toggle item selecionado
   function toggleSelection(element, elements) {
   elements.forEach((item) => {
   if (item !== element && item.classList.contains("green")) {
@@ -66,7 +66,7 @@
   updateBotaoGreen();
   }
 
-  // add event listeners to the items to toggle the selection
+  // event listener de cada toggle
   pratos.forEach((prato) => {
   prato.addEventListener("click", () => {
   toggleSelection(prato, pratos);
